@@ -34,13 +34,6 @@ mod metadata_storage {
     use core::pedersen::{pedersen, PedersenTrait};
     use core::hash::{HashStateTrait};
     use super::*;
-    
-    // Assume pedersen_hash is a helper function that correctly implements the Pedersen hash
-    fn pedersen_hash(a: felt252, b: felt252) -> felt252 {
-        // Initialize the Pedersen hash state with a base value, e.g., 0
-        let hash_state = PedersenTrait::new(0).update(a).update(b).finalize();
-        hash_state
-    }
 
     /// ----------------------------
     /// Storage
